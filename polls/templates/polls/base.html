@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Poll</title>
+    {% load static %}
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'bs/css/bootstrap.min.css' %}" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="{% static 'bs/css/bootstrap-theme.min.css' %}" rel="stylesheet">
+    {% block head %}
+    {% endblock %}
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="{% url 'polls:index' %}">Home</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+            {% if request.user.is_authenticated %}
+                <ul class="nav navbar-nav" style="float: right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+                           aria-expanded="false">{{ request.user.username }}<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="{% url 'polls:profile' %}">Profile</a></li>
+                            <li><a href="{% url 'polls:myquestion' %}">My Question</a></li>
+                            <li><a href="{% url 'polls:myvote' %}">My Vote</a></li>
+                            <li role="separator" class="divider"></li>
+                            {#                <li class="dropdown-header">Nav header</li>#}
+                            <li><a href="{% url 'polls:logout' %}">Log out</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            {% else %}
+                <!--not au -->
+                <form class="navbar-form navbar-right" method="post" action="{% url 'polls:login' %}">{% csrf_token %}
+                    <div class="form-group">
+                        <input name="username" type="text" placeholder="Username" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input name="password" type="password" placeholder="Password" class="form-control">
+                    </div>
+
+
+                    <button type="submit" class="btn btn-success">Sign in</button>
+
+                    <a href="{% url 'polls:signup' %}">
+
+                        <button type="button" class="btn btn-success">Sign up</button>
+                    </a>
+                </form>
+            {% endif %}
+            <!--end -->
+
+        </div><!--/.navbar-collapse -->
+    </div>
+</nav>
+
+<div class="wrapper" style="position: relative;margin-top: 0px;">
+    {% if err_msg %}
+        <div style="left: 50%; margin-left: -250px;;width:500px;margin-top: -65px;line-height:30px;position: absolute;text-align: center; ">
+            <div class="alert alert-danger" role="alert">
+                <strong>{{ err_msg }}</strong>
+            </div>
+        </div>
+    {% endif %}
+    {% if messages %}
+        {% for message in messages %}
+
+            <div style="left: 50%; margin-left: -250px;;width:500px;margin-top: -65px;line-height:30px;position: absolute;text-align: center; ">
+                <div class="alert alert-success" role="alert">
+                    <strong>{{ message }}</strong>
+                </div>
+            </div>
+        {% endfor %}
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+</div>
+<!-- Bootstrap core JavaScript
+================================================== -->
+
+<script src="{% static 'bs/js/jquery.min.js' %}"></script>
+<script src="{% static 'bs/js/bootstrap.min.js' %}"></script>
+{% block last %}
+{% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+
+    <div style="margin:0 auto;width: 800px;margin-top: 100px;">
+        <h2 class="sub-header">My Question</h2>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                <tr>
+                    <th style="text-align:center">Question Id</th>
+                    <th>Question</th>
+                    <th style="text-align:center">Total voter</th>
+                    <th style="text-align:center">Date</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for content in all_questions %}
+                <tr>
+                    <td style="word-wrap:break-word;word-break:break-all;width: 100px;"><h4 style="text-align:center">{{ content.id }}</h4></td>
+                    <td style="word-wrap:break-word;word-break:break-all;width: 500px;"><h5>{{ content.question_text }}</h5></td>
+                    <td style="word-wrap:break-word;word-break:break-all;width: 100px;"><h5 style="text-align:center">{{ content.total_votes }}</h5></td>
+                    <td style="word-wrap:break-word;word-break:break-all;width: 100px;"><h5 style="text-align:center">{{ content.pub_date }}</h5></td>
+                </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+{% endblock %}
