@@ -1,0 +1,45 @@
+{% extends 'polls/base.html' %}
+{% block head %}
+    {% load static %}
+
+{% endblock %}
+{% block content %}
+    {% if signup_msg %}
+        <div style="left: 50%; margin-left: -250px;;width:500px;margin-top: -65px;line-height:30px;position: absolute;text-align: center; ">
+            <div class="alert alert-success" role="alert">
+                <strong>{{ signup_msg }}</strong>
+            </div>
+        </div>
+    {% endif %}
+
+    <div class="list-group" style="margin:0 auto;width:500px;margin-top: 120px;line-height:30px;">
+        <a class="list-group-item active">
+            <h3 class="panel-title">
+                <h4>Questions</h4>
+
+            </h3>
+        </a>
+
+
+        {% if latest_question_list %}
+
+            {% for question in latest_question_list reversed %}
+                <a class="list-group-item"
+                   href="{% url 'polls:detail' question.id %}"><b>{{ forloop.counter }}. </b>{{ question.question_text }}
+                    <br>-- <i><b>author:</b></i> {{ question.owner.username }}  <i><b>date:</b></i> {{ question.pub_date }}
+                </a>
+            {% endfor %}
+
+        {% else %}
+            <div class="alert alert-danger" role="alert">
+                <p>No polls are available.</p>
+            </div>
+
+        {% endif %}
+
+        <a href="{% url 'polls:add' %}">
+            <button type="button" class="btn btn-warning" style="margin-top: 20px;margin-bottom: 50px;">Add Question</button>
+        </a>
+    </div>
+
+{% endblock %}

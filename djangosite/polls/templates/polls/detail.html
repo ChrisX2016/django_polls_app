@@ -1,0 +1,29 @@
+{% extends 'polls/base.html' %}
+{% block content %}
+
+    <div class="panel panel-info" style="margin:0 auto;width:500px;margin-top: 100px;line-height:30px;">
+        <div class="panel-heading">
+            <b>{{ question.id }}. </b>{{ question.question_text }}
+            <br>-- <i><b>author:</b></i> {{ question.owner.username }}  <i><b>date:</b></i> {{ question.pub_date }}
+        </div>
+        <div class="panel-body">
+            {% if error_message %}
+                <div class="alert alert-danger" role="alert">
+                    <strong>{{ error_message }}</strong>
+                </div>
+            {% endif %}
+
+            <form action="{% url 'polls:vote' question.id %}" method="post">
+                {% csrf_token %}
+                {% for choice in question.choice_set.all %}
+                    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}"
+                           style="margin-right: 20px;"/>
+                    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br/>
+                {% endfor %}
+                <button type="submit" value="Vote" class="btn btn-default" style="margin-top:20px;width: 100px"><b>Vote</b></button>
+
+            </form>
+        </div>
+    </div>
+{% endblock %}
+

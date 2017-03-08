@@ -1,0 +1,324 @@
+body{
+// 	font-family:
+// "ff-tisa-web-pro-1","ff-tisa-web-pro-2","Lucida Grande","Helvetica Neue",Helvetica,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","WenQuanYi Micro Hei",sans-serif;
+	font-family: '微软雅黑','Arial';
+}
+.clear-float:after{
+	height: 0;
+	content: '';
+	clear: both;
+	display: block;
+}
+.clear-float{
+	zoom:1;
+}
+.wapper{
+	background:#f6f6f6;
+	position: relative;
+	width: 1200px;
+	margin:0 auto;
+	height: 2000px;
+	padding: 0 125px;
+	.triangle-top{
+		position: absolute;
+		right: 0;
+		top: 0;
+		width: 0;
+	    height: 0;
+	    border-top: 620px solid #000000;
+	    border-left: 620px solid transparent;
+	}
+	.triangle-bottom{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		width: 0;
+	    height: 0;
+	    border-bottom: 380px solid #000000;
+	    border-right: 380px solid transparent;
+	}
+	.title{
+		font-size: 52px;
+		padding-top: 170px;
+		line-height: 66px;
+	}
+	.name{
+		font-size: 52px;
+		line-height: 66px;
+	}
+	.job{
+		font-size: 20px;
+		line-height: 50px;
+		color: #6c6c6c;
+		border-bottom:2px solid   #b3b3b3;
+		width: 780px;
+	}
+	.left-bar-box{
+
+		width: 250px;
+		float: left;
+		.left-bar{
+			padding-bottom: 200px;
+			border-right:1px solid   #b3b3b3;
+			li{
+				h1{
+					cursor: pointer;
+					font-size: 18px;
+					line-height: 60px;
+					font-weight: bold;
+				}
+				.bottom-line{
+					width: 40px;
+					height: 3px;
+					background: #000;
+					margin-bottom: 25px;
+				}
+			.contact{
+					margin-bottom: 15px;
+					dt{
+					font-size: 16px;
+					font-weight: bold;
+					line-height: 28px;
+					}
+					dd{
+						font-size: 14px;
+						color: #6c6c6c;
+					}
+				}
+			}
+			.skill{
+				margin-bottom: 15px;
+				dt{
+					margin-bottom: 10px;
+					font-size: 16px;
+					color:#505050;
+				}
+				dd{
+					width:225px;
+					height: 10px;
+					border:1px solid #c5c5c5;
+					.html{
+						width: 90%;
+						height: 8px;
+						background: #c5c5c5;
+						animation:html 2s;
+						
+					}
+					@keyframes html 
+						{
+							0% {width:0;}
+							100% {width:90%;}
+						}
+					.html{
+						width: 95%;
+						height: 8px;
+						background: #c5c5c5;
+						animation:html 2s;
+						
+					}
+					@keyframes html 
+						{
+							0% {width:0;}
+							100% {width:95%;}
+						}
+					.css{
+						width: 82%;
+						height: 8px;
+						background: #c5c5c5;
+						animation:css 2s;
+						
+					}
+					@keyframes css 
+						{
+							0% {width:0;}
+							100% {width:82%;}
+						}
+					.js{
+						width: 78%;
+						height: 8px;
+						background: #c5c5c5;
+						animation:js 2s;
+						
+					}
+					@keyframes js 
+						{
+							0% {width:0;}
+							100% {width:78%;}
+						}
+					.node{
+						width: 55%;
+						height: 8px;
+						background: #c5c5c5;
+						animation:node 2s;
+						
+					}
+					@keyframes node 
+						{
+							0% {width:0;}
+							100% {width:55%;}
+						}
+				}
+			}
+			.skill-others{
+				li{
+					text-align: justify;
+					width: 225px;
+					list-style:disc;
+					font-size: 14px;
+					color: #6c6c6c;
+					line-height: 16px;
+					margin-bottom: 8px;
+				}
+			}
+			.hobby{
+				li{
+					color: #6c6c6c;
+					line-height: 16px;
+					margin-bottom: 8px;
+				}
+			}
+		}
+	}
+	.right-bar-box{
+		width: 680px;
+		float: left;
+		margin-left: 20px;
+		.split-line{
+			border-top: 2px solid  #b3b3b3;
+		}
+		.right-bar{
+			li{
+				margin-bottom: 15px;
+				h1{
+					cursor: pointer;
+					font-size: 18px;
+					line-height: 60px;
+					font-weight: bold;
+				}
+				.bottom-line{
+					width: 40px;
+					height: 3px;
+					background: #000;
+					margin-bottom: 25px;
+				}
+				.intrduce{
+					display: block;
+					width:540px;
+					color: #6c6c6c;
+					font-size: 14px;
+					line-height: 20px;
+					span{
+						margin-top: 8px;
+						display: block;
+						text-align: right;
+					}
+				}
+				.social{
+					li{
+						display: inline-block;	
+						a{
+							color: #6c6c6c;
+							margin-right:135px;
+							line-height: 28px;	
+							i{
+								display: inline-block;
+								color:#000;
+								font-size: 32px;
+								margin-right: 8px;
+								line-height: 28px;
+								
+							}
+						}
+					}
+					.wechat{
+						position: relative;
+						.qr-code{
+							position: absolute;
+							right: 0;
+							width: 115px;
+							height: 115px;
+							top:-80px;
+							display: none;
+							img{
+								width: 100%;
+								height: 100%;
+							}
+						}
+					}
+				}
+				.edu{
+					li{
+						.year{
+							color:#6c6c6c;
+							width: 220px;
+							float: left;
+							font-size: 14px;
+						}
+						dl{
+							height: 50px;
+							float: left;
+							dt{
+								line-height: ;
+								font-size: 16px;
+								font-weight: bold;
+								line-height: 24px;
+							}
+							dd{
+								color:#6c6c6c;
+								font-size: 14px;
+								line-height: 20px;
+							}
+						}
+					}
+				}
+				.work{
+					li{
+						.year{
+							height: 14px;
+							color:#6c6c6c;
+							width: 220px;
+							float: left;
+							font-size: 14px;
+							a{
+								color:#6c6c6c;
+								.icon-guankancishu{
+									margin-right: 45px;
+									font-size: 22px;
+								}
+							}
+						}
+						dl{
+							
+							float: left;
+							dt{
+								line-height: ;
+								font-size: 16px;
+								font-weight: bold;
+								line-height: 30px;
+								span{
+									display: inline-block;
+									width: 130px;
+									float: right;
+								}
+							}
+							dd{
+								color:#6c6c6c;
+								font-size: 14px;
+								line-height: 20px;
+								width: 430px;
+
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+.iconfont{
+	transition:All 1s ;
+}
+.social li:hover .iconfont{
+	transform: rotate(360deg) scale(1.2);
+}; 
+	

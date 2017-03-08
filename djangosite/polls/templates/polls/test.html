@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="http://code.jquery.com/jquery-1.8.0.min.js">
+   var max_fields      = 5; //maximum input boxes allowed
+    var wrapper          = $(".input_fields_wrap"); //Fields wrapper
+    var add_button    =(".add_field_button"); //Add button ID
+
+    var x = 1; //initlal text box count
+    $(add_button).click(function(e){ //on add input button click
+        e.preventDefault();
+        if(x < max_fields){ //max input box allowed
+            x++; //text box increment
+            $(wrapper).append('<tr style=""><td></td><td><button  class="remove_field btn">Del</button></td></tr>'); //add input box
+            }
+    });
+
+    $(wrapper).on("click",".remove_field", function(e){ //user click on remove text
+        e.preventDefault(); $(this).closest('tr').remove(); x--;
+    })
+</script>
+</head>
+<body>
+
+    <tr><button style="margin-left:10px" class="add_field_button btn">Add</button></tr>
+    <tbody class="input_fields_wrap"></tbody>
+
+</body>
+</html>
