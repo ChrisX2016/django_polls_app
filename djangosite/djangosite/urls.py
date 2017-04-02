@@ -19,6 +19,7 @@ from home import views as home_views
 
 urlpatterns = [
     url(r'^polls/', include('polls.urls')),
+    url(r'^practice/', include('practice.urls')),
     url(r'^admin/', admin.site.urls),
     url(r'^$', home_views.index_view,name='home_index'),
 ]

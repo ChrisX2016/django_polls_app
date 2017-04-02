@@ -1,0 +1,222 @@
+.container{
+	height:3000px;
+}
+
+.mypanel .nytable .mycarousel{
+	display: block;
+}
+
+/*panel*/
+.panel .showOnHover {
+	display: none;
+}
+
+.panel:hover .showOnHover{
+	display: inline-block;
+}
+
+.panel:hover {
+	box-shadow: 0px 0px 8px black;
+	border:1px solid red;
+	margin-bottom: 18px;
+}
+
+@media screen and (max-width: 750px){
+	.mypanel{height:700px;}
+}
+
+.mypanel{
+	height:250px;
+}
+
+/*table*/
+.table{
+	display: none;
+}
+
+.table.active{
+	display: table;
+}
+
+
+
+.tables{
+	display: block;
+}
+
+
+/*olark*/
+.olark-container{
+	display:block;
+	bottom:0px;
+	right:100px!important;
+	width:350px;
+	line-height:30px;
+	position:fixed;
+	text-align:center;
+}
+
+
+
+.olark-button{
+	width: 200px;
+	position: relative;
+	margin-left: 150px;
+	padding: 5px 15px;
+	display: block;
+	margin-bottom: -1px;
+	background-color: #f0a628;
+	border: 0px solid #ddd;
+	box-shadow: 0px 0px 8px #929292;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	z-index: 1000;
+	/*display: none;*/
+}
+
+.glyphicon.olark-button-icon{
+	position: absolute;
+	margin-top: 8px;
+    /*margin-bottom: 5px;*/
+    font-size: 26px;
+    cursor: pointer;
+/*    display: inline-block;*/
+ }
+
+ .olark-button-content{
+ 	margin-left: 40px;
+ 	font-weight:bold;
+ 	font-size:16px;
+ }
+
+.olark-button:hover {
+	box-shadow: 0px 0px 16px #929292;
+}
+
+
+
+.olark-table{
+	width: 350px;
+	height:400px; 
+	box-shadow: 0px 0px 6px #929292;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	position: relative;
+	background-color: white;
+	display: none;
+}
+
+.olark-table-button{
+	width: 350px;
+	position: relative;
+	padding: 5px 15px;
+	display: block;
+	margin-bottom: -1px;
+	background-color: #f0a628;
+	border: 0px solid #ddd;
+	/*box-shadow: 0px 0px 8px #929292;*/
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	z-index: 1000;
+}
+
+.olark-button-content.olark-table-button-content{
+	margin-left: 0px;
+	margin-right: 40px;
+}
+
+.olark-button-icon.arrow:hover {
+	opacity:.8!important;
+	margin-top: 12px;
+}
+
+.olark-form-container{
+	/*bottom: 0!important;*/
+	position: relative!important;
+	background: white;
+	margin: 10px 25px 0px 25px;
+}
+
+.olark-form {
+	height: 300px;
+	background: white;
+}
+
+.jumbotron.olark-form-text{
+	width: 300px;
+	margin:0px 0px;
+	padding: 10px;
+	padding-right: 15px;
+    padding-left: 15px;
+}
+
+.olark-form-button{
+	background-color: #f0a628;
+	width: 300px;
+	border: 0px;
+	border-radius: 6px;
+	font-weight:bold;
+	margin-top: 0px;
+}
+
+
+.olark-form-button:hover{
+	box-shadow: 0px 0px 8px #929292;
+}
+
+.olark-form-input-container{
+	margin: 10px;
+	/*border-color: #929292;*/
+	border-bottom: 1px solid #929292;
+}
+
+.olark-form-input{
+	border: 0px;
+	width: 280px;
+
+}
+
+.olark-form-input.olark-form-input-textarea{
+	resize:none;
+
+}
+
+/*navbar*/
+.mynavbar{
+	margin-top: 20px;
+	z-index: 100;
+	/*width: 100%;*/
+	/*left:0px;*/
+	position: relative;
+	/*top:0px;*/
+}
+
+.mynavbar.isStuck{
+	width: 100%;
+	left:0px;
+	position: fixed;
+	top:0px;
+}
+
+.navbar.navbar-inverse{
+	width: 1140px;
+	margin-right: auto;
+    margin-left: auto;
+}
+
+.nav.navbar-nav a:after {
+	content: "";
+    top: auto;
+    bottom: 4px;
+    width: 100%;
+    position: absolute;
+    right: auto;
+    background: #1a7ab9;
+    display: none;
+    left: 0;
+    height: 4px;
+}
+.nav.navbar-nav a:hover:after {
+	display: block!important;
+}
+

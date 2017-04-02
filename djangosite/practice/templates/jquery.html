@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>learn jquery</title>
+
+    <!-- Bootstrap -->
+    {% load static %}
+    <link href={% static "practice/mycss.css" %} rel="stylesheet">
+
+    <link href={% static "bs/css/bootstrap.min.css" %} rel="stylesheet">
+
+
+</head>
+<body>
+<div class="container">
+    <div class="page-header" id="Buttons">
+        <h1>Buttons</h1>
+    </div>
+    <!-- Button -->
+    <div class="jumbotron">
+        <button type="button" data-panelid="panel1" class="btn btn-default">Default</button>
+        <button type="button" data-panelid="panel2" class="btn btn-primary">Primary</button>
+        <button type="button" data-panelid="panel3" class="btn btn-success">Success</button>
+        <button type="button" data-panelid="panel4" class="btn btn-info">Info</button>
+        <button type="button" data-panelid="panel5" class="btn btn-warning">Warning</button>
+        <button type="button" data-panelid="panel6" class="btn btn-danger">Danger</button>
+    </div>
+
+    <div class="page-header" id="Navbar">
+        <h1>Navbar</h1>
+    </div>
+    <!-- navbar -->
+    <div class="mynavbar">
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="collapsed navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-9" aria-expanded="false">
+                    </button>
+                    <a href="#" class="navbar-brand">Home</a>
+                </div>
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-9">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#Buttons">Buttons</a></li>
+                        <li><a href="#Navbar">Navbar</a></li>
+                        <li><a href="#Panels">Panels</a></li>
+                        <li><a href="#Tables">Tables</a></li>
+                        <li><a href="#Carousel">Carousel</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <div class="page-header panel-page-header" id="Panels">
+        <h1>Panels</h1>
+    </div>
+
+    <!-- Panel -->
+    <div class="mypanel">
+        <div class="row">
+            <div class="col-sm-4">
+                <div id="panel1" class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                        <div class="showOnHover">
+                            <a herf="" class="btn btn-xs btn-danger">delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="panel2" class="panel panel-primary">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                        <div class="showOnHover">
+                            <a herf="" class="btn btn-xs btn-danger">delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div id="panel3" class="panel panel-success">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                        <div class="showOnHover">
+                            <a herf="" class="btn btn-xs btn-danger">delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="panel4" class="panel panel-info">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                        <div class="showOnHover">
+                            <a herf="" class="btn btn-xs btn-danger">delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.col-sm-4 -->
+            <div class="col-sm-4">
+                <div id="panel5" class="panel panel-warning">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                        <div class="showOnHover">
+                            <a herf="" class="btn btn-xs btn-danger">delete</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="panel6" class="panel panel-danger">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">Panel title</h3>
+                    </div>
+                    <div class="panel-body">
+                        Panel content
+                        <div class="showOnHover">
+                            <a herf="" class="btn btn-xs btn-danger">delete</a>
+                        </div>
+                    </div>
+                </div>
+            </div><!-- /.col-sm-4 -->
+
+
+        </div>
+    </div>
+
+    <div class="page-header" id="Tables">
+        <h1>Tables</h1>
+    </div>
+    <!-- table -->
+    <div class="mytable">
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" rel="table1" class="active table-panel"><a href="JavaScript:void(0);">table1</a>
+            </li>
+            <li role="presentation" rel="table2" class="table-panel"><a href="JavaScript:void(0);">table2</a></li>
+            <li role="presentation" rel="table3" class="table-panel"><a href="JavaScript:void(0);">table3</a></li>
+        </ul>
+        <div class="tables">
+            <table id="table1" class="table table-striped active">
+                <thead>
+                <tr>
+                    <th>#1</th>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>Username</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Mark</td>
+                    <td>Otto</td>
+                    <td>@mdo</td>
+                </tr>
+                </tbody>
+            </table>
+            <table id="table2" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#2</th>
+                    <th>First Name2</th>
+                    <th>Last Name2</th>
+                    <th>Username2</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>2</td>
+                    <td>Mark2</td>
+                    <td>Otto2</td>
+                    <td>@mdo2</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <table id="table3" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>#3</th>
+                    <th>First Name3</th>
+                    <th>Last Name3</th>
+                    <th>Username3</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>3</td>
+                    <td>Mark3</td>
+                    <td>Otto3</td>
+                    <td>@mdo3</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Carousel -->
+    <div class="mycarousel">
+        <div class="page-header" id="Carousel">
+            <h1>Carousel</h1>
+        </div>
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                <li data-target="#carousel-example-generic" data-slide-to="1" class=""></li>
+                <li data-target="#carousel-example-generic" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img data-src="holder.js/1140x500/auto/#777:#555/text:First slide" alt="First slide [1140x500]"
+                         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCAxMTQwIDUwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvMTE0MHg1MDAvYXV0by8jNzc3OiM1NTUvdGV4dDpGaXJzdCBzbGlkZQpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1YWJlMTJkNDVjIHRleHQgeyBmaWxsOiM1NTU7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6NTdwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTVhYmUxMmQ0NWMiPjxyZWN0IHdpZHRoPSIxMTQwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzc3NyIvPjxnPjx0ZXh0IHg9IjM5MC41MDc4MTI1IiB5PSIyNzUuNSI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9nPjwvZz48L3N2Zz4="
+                         data-holder-rendered="true">
+                </div>
+                <div class="item">
+                    <img data-src="holder.js/1140x500/auto/#666:#444/text:Second slide" alt="Second slide [1140x500]"
+                         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCAxMTQwIDUwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvMTE0MHg1MDAvYXV0by8jNjY2OiM0NDQvdGV4dDpTZWNvbmQgc2xpZGUKQ3JlYXRlZCB3aXRoIEhvbGRlci5qcyAyLjYuMC4KTGVhcm4gbW9yZSBhdCBodHRwOi8vaG9sZGVyanMuY29tCihjKSAyMDEyLTIwMTUgSXZhbiBNYWxvcGluc2t5IC0gaHR0cDovL2ltc2t5LmNvCi0tPjxkZWZzPjxzdHlsZSB0eXBlPSJ0ZXh0L2NzcyI+PCFbQ0RBVEFbI2hvbGRlcl8xNWFiZTEyZjEzZiB0ZXh0IHsgZmlsbDojNDQ0O2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1mYW1pbHk6QXJpYWwsIEhlbHZldGljYSwgT3BlbiBTYW5zLCBzYW5zLXNlcmlmLCBtb25vc3BhY2U7Zm9udC1zaXplOjU3cHQgfSBdXT48L3N0eWxlPjwvZGVmcz48ZyBpZD0iaG9sZGVyXzE1YWJlMTJmMTNmIj48cmVjdCB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIGZpbGw9IiM2NjYiLz48Zz48dGV4dCB4PSIzMzUuNjAxNTYyNSIgeT0iMjc1LjUiPlNlY29uZCBzbGlkZTwvdGV4dD48L2c+PC9nPjwvc3ZnPg=="
+                         data-holder-rendered="true">
+                </div>
+                <div class="item">
+                    <img data-src="holder.js/1140x500/auto/#555:#333/text:Third slide" alt="Third slide [1140x500]"
+                         src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/PjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB3aWR0aD0iMTE0MCIgaGVpZ2h0PSI1MDAiIHZpZXdCb3g9IjAgMCAxMTQwIDUwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+PCEtLQpTb3VyY2UgVVJMOiBob2xkZXIuanMvMTE0MHg1MDAvYXV0by8jNTU1OiMzMzMvdGV4dDpUaGlyZCBzbGlkZQpDcmVhdGVkIHdpdGggSG9sZGVyLmpzIDIuNi4wLgpMZWFybiBtb3JlIGF0IGh0dHA6Ly9ob2xkZXJqcy5jb20KKGMpIDIwMTItMjAxNSBJdmFuIE1hbG9waW5za3kgLSBodHRwOi8vaW1za3kuY28KLS0+PGRlZnM+PHN0eWxlIHR5cGU9InRleHQvY3NzIj48IVtDREFUQVsjaG9sZGVyXzE1YWJlMTJkNWZhIHRleHQgeyBmaWxsOiMzMzM7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LWZhbWlseTpBcmlhbCwgSGVsdmV0aWNhLCBPcGVuIFNhbnMsIHNhbnMtc2VyaWYsIG1vbm9zcGFjZTtmb250LXNpemU6NTdwdCB9IF1dPjwvc3R5bGU+PC9kZWZzPjxnIGlkPSJob2xkZXJfMTVhYmUxMmQ1ZmEiPjxyZWN0IHdpZHRoPSIxMTQwIiBoZWlnaHQ9IjUwMCIgZmlsbD0iIzU1NSIvPjxnPjx0ZXh0IHg9IjM3Ny44NjcxODc1IiB5PSIyNzUuNSI+VGhpcmQgc2xpZGU8L3RleHQ+PC9nPjwvZz48L3N2Zz4="
+                         data-holder-rendered="true">
+                </div>
+            </div>
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+
+    <!-- olark -->
+    <div class="olark-container">
+        <button type="button" class="olark-button">
+            <span class="glyphicon glyphicon-envelope olark-button-icon" aria-hidden="true"></span>
+            <span class="olark-button-content">Contact Me</span>
+        </button>
+        <div class="olark-table">
+            <div type="button" class="olark-table-button">
+                <span class="olark-button-content olark-table-button-content">Have a question?</span>
+                <span class="glyphicon glyphicon-chevron-down olark-button-icon arrow" aria-hidden="true"></span>
+            </div>
+            <div class="olark-form-container">
+                <form class="olark-form">
+
+                    <div class="jumbotron olark-form-text">Send us your questions and we'll get back to you soon!</div>
+                    <div class="olark-form-input-container"><input type="text" name="fname" class="olark-form-input"
+                                                                   placeholder="Type your Name"></div>
+                    <div class="olark-form-input-container"><input type="email" name="email" class="olark-form-input"
+                                                                   placeholder="Type your Email"></div>
+                    <div class="olark-form-input-container"><input type="tel" name="phone" class="olark-form-input"
+                                                                   placeholder="Type your Phone"></div>
+                    <div class="olark-form-input-container"><textarea class="olark-form-input olark-form-input-textarea"
+                                                                      placeholder="We still want to hear from you. Please leave us a note:"></textarea>
+                    </div>
+                    <button type="button" class="olark-form-button">Send</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src={% static "jquery-3.1.1.min.js" %}></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src={% static "bs/js/bootstrap.min.js" %}></script>
+    <script src={% static "practice/myjs.js"  %}></script>
+</body>
+</html>
